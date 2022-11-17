@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<a href="http://localhost:5000/nome?">   <input type="button" value="voltar" /> </a>
+<h1>
+    Questoes:
+</h1>
+<form method="POST">
+    {% for pergunta in perguntas %}
+        <span> {{pergunta.pergunta}} </span><br>
+        {% for resposta in pergunta.respostas %}
+            <input type="radio" name="input_resposta-{{pergunta.id}}" value="{{ resposta.1 }}">
+            <span> {{resposta.0}} </span><br>
+        {%endfor%}
+    {%endfor%}
+    <input type="submit" value="Submit">
+</form>
+<h4>Você acertou {{cont}} quesões!</h4>
+
+
+{% endblock %}

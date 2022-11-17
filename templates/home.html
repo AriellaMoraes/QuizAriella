@@ -2,13 +2,16 @@
 
 {% block conteudo %}
 
-<div id="inicio">
-    <h1><font color = "Red">Ariella Moraes</font> </h1>
+<div id="inicio" class="centraliza">
+    
     <img src="{{ url_for('static', filename='ariella.jpeg')}}" width="250">
-    <p>Esse eh minha primeira pagina teste de estudo em python,<br>
-        para isso elaborei esse quiz dinamico para ver quem realmente me conhece!<br >
-        Esta pronto??? entao vamos comecar!!!
+    <h2>Voce me conhece bem???</h2>
+    <h3>Essa eh minha primeira pagina teste de estudo em python,<br>
+        por isso elaborei esse quiz dinamico para ver quem realmente me conhece!<br >
+        Esta pronto(a)??? entao vamos comecar!!! </h3>
     </p>
+    <a href="http://localhost:5000/nome?">   <input type="button" value="ir" /> </a>
+    
 </div>
 
 {% endblock %}
