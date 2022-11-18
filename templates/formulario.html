@@ -4,7 +4,7 @@
 
 <a href="http://localhost:5000/nome?">   <input type="button" value="voltar" /> </a>
 <h1>
-    Questoes:
+    Boa sorte {{nome}}
 </h1>
 <form method="POST">
     {% for pergunta in perguntas %}
@@ -16,7 +16,7 @@
     {%endfor%}
     <input type="submit" value="Submit">
 </form>
-<h4>Você acertou {{cont}} quesões!</h4>
+<h1>{{nome}}, você acertou {{cont}}/10 questoões!</h1>
 
 
 {% endblock %}

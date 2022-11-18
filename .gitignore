@@ -1,2 +1,5 @@
 .venv/*
 *.pyc
+flask_session
+exemplo.html
+exemplomain.py

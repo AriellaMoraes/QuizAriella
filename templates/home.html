@@ -2,15 +2,18 @@
 
 {% block conteudo %}
 
-<div id="inicio" class="centraliza">
+<div id="inicio" class="centraliza" style="padding: 2em;">
     
     <img src="{{ url_for('static', filename='ariella.jpeg')}}" width="250">
-    <h2>Voce me conhece bem???</h2>
-    <h3>Essa eh minha primeira pagina teste de estudo em python,<br>
-        por isso elaborei esse quiz dinamico para ver quem realmente me conhece!<br >
-        Esta pronto(a)??? entao vamos comecar!!! </h3>
-    </p>
-    <a href="http://localhost:5000/nome?">   <input type="button" value="ir" /> </a>
+    <h2 style="margin-top: 1em;">Você me conhece bem???</h2>
+    <h3>Essa é minha primeira página teste de estudo em python,<br>
+        por isso elaborei esse quiz dinâmico para ver quem realmente me conhece!<br >
+        Está pronto(a)??? então vamos começar!!! </h3>
+    <div class="row">
+        <a href="http://localhost:5000/nome">
+            <button type="button" class="btn btn-outline-danger">Continue</button>  
+        </a>
+    </div>
     
 </div>
 
