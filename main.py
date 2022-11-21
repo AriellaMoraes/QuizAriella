@@ -3,6 +3,8 @@
 from flask import Flask, render_template, request, url_for, session
 from flask_session import Session
 from database.perguntas import perguntas
+from Lib.banco_de_dados import create_ranking, insert_ranking
+
 
 app = Flask(__name__, template_folder='templates')
 
@@ -20,7 +22,7 @@ def home():
 def nome():
     data = request.form.to_dict() 
     session['nome'] = data.get('nome') 
-    session['temp'] = 'Ariella'
+    # insert_users(data.get('nome'))
     app.logger.info(data)
     return render_template('nome.html', data=data)
 
@@ -36,6 +38,7 @@ def formulario():
     nome = session['nome']
     data = request.form.to_dict() 
     cont = calcula(data)
+    insert_ranking((cont, 'nada', nome))
     app.logger.info(data)
     return render_template('formulario.html', perguntas = perguntas, cont = cont, nome=nome)
 
